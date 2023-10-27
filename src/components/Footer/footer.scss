@@ -1,0 +1,60 @@
+.footer {
+  height: 10vh;
+  background-color: var(--nav-bg-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--primary-light);
+  bottom: 0;
+
+  .footer-brand {
+    .footer-logo {
+      border-radius: 50%;
+      background-color: var(--primary-light);
+      transition: 0.3s;
+    }
+
+    .signature {
+      font-family: "Cedarville Cursive", cursive;
+      margin: auto 0 0 0.5rem;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      color: var(--primary-blue);
+      .footer-logo {
+        background-color: var(--primary-blue);
+      }
+    }
+  }
+
+  .social-medias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+    margin-top: 1rem;
+
+    .social-media {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #4d4d4e;
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--primary-light);
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .footer {
+    justify-content: space-between;
+
+    .footer-brand {
+      margin-left: 2rem;
+    }
+  }
+}

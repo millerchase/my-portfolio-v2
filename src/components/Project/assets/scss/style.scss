@@ -1,0 +1,80 @@
+:root {
+  --border-radius: 10px;
+}
+
+.projects {
+  color: var(--primary-light);
+
+  .project {
+    &:hover {
+      h2 {
+        color: var(--primary-blue);
+      }
+    }
+  }
+
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 2rem;
+  }
+
+  .card {
+    max-width: 100%;
+    background-color: var(--nav-bg-color);
+    transition: 0.3s;
+
+    .card-background {
+      opacity: 0.6;
+    }
+
+    .card-img-overlay {
+      // display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.3s ease-in;
+    }
+
+    &:hover {
+      .card-background {
+        opacity: 1;
+      }
+
+      .card-img-overlay {
+        opacity: 1;
+      }
+    }
+
+    p {
+      background-color: var(--nav-bg-color);
+      color: var(--primary-light);
+      border-radius: var(--border-radius);
+    }
+    .technologies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0.5rem;
+      background-color: var(--nav-bg-color);
+      color: var(--primary-light);
+      border-radius: var(--border-radius);
+    }
+  }
+}
+
+@media screen and (min-width: 790px) {
+  .projects {
+    padding-top: 5vh;
+
+    .project-list {
+      .card {
+        width: 40vw;
+      }
+    }
+  }
+}

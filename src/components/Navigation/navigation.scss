@@ -1,0 +1,176 @@
+/* #faff00 */
+// #d9dbf1
+
+.nav-bar {
+  background-color: var(--nav-bg-color);
+}
+
+.logo {
+  background-color: var(--primary-light);
+  margin-left: 10vw;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 5px;
+  transition: 0.3s;
+
+  .logo-img {
+    max-height: 8vh;
+  }
+
+  &:hover {
+    background-color: var(--primary-blue);
+  }
+}
+
+.nav-list {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-evenly;
+  width: 25vw;
+}
+
+.nav-link {
+  color: var(--nav-icon-color);
+  font-size: 2.3rem;
+  margin: 0.5rem 0;
+  width: 80px;
+  position: relative;
+  text-decoration: none;
+
+  i {
+    transition: all 0.3s ease-out;
+  }
+
+  &:hover {
+    color: var(--primary-blue);
+
+    svg {
+      opacity: 0;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.nav-link:after {
+  content: "";
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  width: 25%;
+}
+
+.selected {
+  color: var(--selected-color) !important;
+
+  &:hover {
+    color: var(--primary-blue) !important;
+  }
+}
+
+.project-link {
+  &:after {
+    content: "PROJECTS";
+    bottom: 1rem;
+    left: 0;
+  }
+}
+
+.about-link {
+  &:after {
+    content: "ABOUT ME";
+    margin-left: -1.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.resume-link {
+  &:after {
+    content: "RESUME";
+    bottom: 1rem;
+    left: 0;
+  }
+}
+
+.contact-link {
+  &:after {
+    content: "CONTACT";
+    bottom: 1rem;
+    left: 0rem;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .logo {
+    margin-left: -5vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #navbarNav {
+    justify-content: flex-end;
+  }
+
+  .logo {
+    margin-left: -2vw;
+  }
+
+  .nav-list {
+    margin-right: 0;
+    margin-left: 50vw;
+  }
+
+  .nav-link {
+    margin: 0 1rem;
+
+    &:after {
+      margin-left: -0.8rem;
+      font-size: 1rem;
+    }
+  }
+
+  .home-link {
+    &:after {
+      content: "HOME";
+      margin-left: -2.5rem;
+      margin-top: 1.7rem;
+      top: 0;
+    }
+  }
+
+  .about-link {
+    &:after {
+      margin-left: -2rem;
+    }
+  }
+
+  .contact-link {
+    &:after {
+      margin-left: -1rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-left: -3vw;
+  }
+  .nav-list {
+    margin-left: 60vw;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .logo {
+    margin-left: -6vw;
+  }
+}
